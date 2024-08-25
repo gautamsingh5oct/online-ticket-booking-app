@@ -1,0 +1,12 @@
+<div class="cotainer">
+<h1>Color Component</h1>
+<ul class="list-group">
+    <span *ngFor="let color of allColors">
+    <!-- <li class="list-group-item"> {{color}}<button type="button" class="btn btn-danger" (click)="removeColor(color)">Remove</button></li> -->
+    <div class="row">
+    <app-colors-child appHoverHighlight [printColor]="color" (deleteEventEmitter)="removeColor($event)"></app-colors-child>
+    </div>
+   </span>
+   
+</ul>
+</div>
